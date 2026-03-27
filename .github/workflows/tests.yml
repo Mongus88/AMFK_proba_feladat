@@ -1,5 +1,15 @@
 name: Playwright Tests (with uv)
-on: [push, pull_request]
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+    inputs:
+      test_file:
+        description: 'Melyik tesztet futtassuk? (hagyja üresen az összeshez)'
+        required: false
+        default: ''
 
 jobs:
   test:
@@ -38,7 +48,7 @@ jobs:
       - name: Run tests
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)
-          uv run pytest ui/tests --html=report.html --self-contained-html
+          uv run pytest ui/tests/${{ github.event.inputs.test_file }} --html=report.html --self-contained-html
 
       - name: Upload Test Report
         if: always()
