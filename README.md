@@ -26,7 +26,7 @@ Az egymásra épülés miatt a hibákat könnyebben meg lehet találni mert ha a
 Szükséges lenne még negatív teszteket is készíteni, hogy még nagyobb lefedetséget érjünk el.
 
 A TC04 teszt a regressziós csomagba szánnám mert itt a teljes folyamatot teszteljük érvényes adatokkal, ez megfelel egy smoke tesztnek.
-Ha ez elbukik akkor nincs értelme további teszteknek. Egy webshopon az ügyfél gyors, pontos és akadájmentes kiszolgálása a legfontosabb.
+Ha ez elbukik akkor nincs értelme további teszteknek. Egy webshopon az ügyfél gyors, pontos és akadálymentes kiszolgálása a legfontosabb.
 Ezzel a teszttel a kockázatokat nagyban tudjuk csökkenteni.  
 
 ## 2. API Tesztelés
