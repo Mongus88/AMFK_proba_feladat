@@ -1,7 +1,6 @@
 import sys
 import os
 import pytest
-import requests
 from playwright.sync_api import Page
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -28,10 +27,13 @@ def logged_in_page(page: Page, base_url: str):
 def api_base_url():
     return "https://reqres.in/api"
 
+
 @pytest.fixture(scope="session")
 def api_headers():
+    api_key = os.getenv("X_API_KEY", "reqres_3ba6996e523b4520813ea81729d25940")
+
     return {
-        "x-api-key": "reqres_3ba6996e523b4520813ea81729d25940",
+        "x-api-key": api_key,
         "Content-Type": "application/json",
         "User-Agent": "Mozilla/5.0"
     }

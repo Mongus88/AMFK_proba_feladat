@@ -46,9 +46,11 @@ jobs:
           fi
 
       - name: Run tests
+        env:
+          X_API_KEY: ${{ secrets.REQRES_API_KEY }}
         run: |
           export PYTHONPATH=$PYTHONPATH:$(pwd)
-          uv run pytest ui/tests/${{ github.event.inputs.test_file }} --html=report.html --self-contained-html
+          uv run pytest api/tests/ ui/tests/${{ github.event.inputs.test_file }} --html=report.html --self-contained-html
 
       - name: Upload Test Report
         if: always()
