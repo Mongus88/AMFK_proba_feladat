@@ -31,7 +31,7 @@ Ezzel a teszttel a kockázatokat nagyban tudjuk csökkenteni.
 
 ## 2. API Tesztelés
 Niquests API tesztelő keretrendszerrel szerettem volna megoldani a feladatot de 403-as státusz kódot kapok a GET kérésre. A 403 Forbidden azt jelenti, hogy nincs hozzáférési jogom
-és szerver megtagadja a kérést. (https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/403) Claud AI szerint ennek az lehet az oka, hogy a niquests modern API tesztelő ezért az oldal robotként érzékeli.
+és szerver megtagadja a kérést. (https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Status/403) claude AI szerint ennek az lehet az oka, hogy a niquests modern API tesztelő ezért az oldal robotként érzékeli.
 Próbáltam a kérést úgy csomagolni (a header átírásával) mintha az egy böngészőből érkezne, de nem jártam sikerrel. Az oldalt böngészőben megnyitva látható, hogy API key kell a kapcsolathoz.  
 
 #### update  
